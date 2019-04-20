@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>FCC: Survey form</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <h1 id="title">Survey Form</h1>
+    </header>
+    <section>
+        <p id="description">Let us know which technology are you using for web development.</p>
+
+        <form action="" id="survey-form">
+            <div class="row">
+                <label for="name" id="name-label">Name: </label>
+                <input type="text" placeholder="Enter your name" id="name" required>
+            </div>
+            <div class="row">
+                <label id="email-label" for="email">Email: </label>
+                <input type="email" id="email" placeholder="yourusername@example.com" required>
+            </div>
+            <div class="row">
+                <label id="number-label" for="age">Age: </label>
+                <input type="number" id="number" min=11 max=80 placeholder="18">
+            </div>
+
+            <div class="row">
+                <label for="role">Which developer are you?</label>
+                <select name="role" id="dropdown">
+                    <option disabled checked>Select one</option>
+                    <option value="frontend">Frontend Web developer</option>
+                    <option value="backend">Backend Web developer</option>
+                    <option value="fullstack">Fullstack Web developer</option>
+                </select>
+            </div>
+
+            <div class="row">
+                <label for="framework">Do you use any framework or not?</label>
+                <div id="framework">
+                    <input type="radio" name="framework" value="true"> <label> Yes </label>
+                    <input type="radio" name="framework" value="false"> <label> No</label>
+                </div>
+            </div>
+
+            <div class="row">
+                <label for="coach">
+                    Which of the following resources have you used?
+                </label>
+                <div>
+                    <label><input type="checkbox" name="coach" value="freecodecamp"> Freecodecamp.org </label>
+                    <label><input type="checkbox" name="coach" value="codeacademy"> Codeacademy</label>
+                    <label><input type="checkbox" name="coach" value="books">Just Books</label>
+                </div>
+            </div>
+            
+            <div class="row">
+                <label for="skills" class="column1">Skills</label>
+                <textarea name="skills" class="column2" id="skills" cols="30" rows="10">Please enter your skills ( comma seperated )</textarea>
+            </div>
+
+            <div class="d-flex">
+                <input type="submit" value="Submit" id="submit">
+            </div>            
+        </form>
+    </section>
+
+    <script src="js/script.js"></script>
+    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+</body>
+</html>

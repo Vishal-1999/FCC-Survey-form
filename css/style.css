@@ -1,0 +1,103 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    background: #9b9beecb;
+    font-size: 20px;
+}
+/**
+* header
+*/
+
+#title{
+    text-align: center;
+    margin: 0 auto;
+    vertical-align: bottom;
+}
+#description{
+    text-align: center;
+}
+
+section{
+    background-color: #ffeeee;
+    margin: 5px;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.row{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 20px;
+    grid-row-gap: 5px;
+    grid-template-areas: "label label" "input input";
+    margin-bottom: 10px;
+}
+
+.row > label, .row > input{
+    display: block;
+}
+
+.row > label {
+    grid-area: label;
+
+}
+
+.row > input {
+    grid-area: input;
+    font-size: 1em;
+    border-radius: 5px;
+    width: 100%;
+    border: 1px grey;
+    border-style: solid;
+}
+
+}
+
+select{
+    font-size: 1em;
+}
+
+.row > textarea{
+    grid-area: input;
+}
+
+.d-flex{
+    display: flex;
+    justify-content: center;
+}
+
+#submit{
+    font-size: 1em;
+    background: #002fffbd;
+    color: white;
+    border-radius: 10px;
+}
+
+label{
+    display: block;
+}
+
+@media (min-width: 500px){
+    .row{
+        grid-template-areas: "label input";
+    }
+    .row > label{
+        justify-self: end;
+        align-self: center;
+    }
+
+    .row > input, .row > div{
+        justify-self: start;
+    }
+
+    section{
+        max-width: 720px;
+        margin: auto;
+    }
+
+    #submit{
+        font-size: 1.3em;
+    }
+}
